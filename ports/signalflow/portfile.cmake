@@ -9,7 +9,7 @@
 vcpkg_from_git(
   OUT_SOURCE_PATH SOURCE_PATH
   URL /Users/ac/src/signalflow
-  REF 9c90ce0849e310841340ff7a09e250a6e8e553be
+  REF 2a929347800aac25e047ccf56f2d8e3949c131fd
   HEAD_REF master
 )
 
