@@ -1,15 +1,8 @@
-# vcpkg_from_github(
-#   OUT_SOURCE_PATH SOURCE_PATH
-#   REPO acarabott/signalflow
-#   REF 9c90ce0849e310841340ff7a09e250a6e8e553be
-#   SHA512 1c8c418bea7cc5df72e754f3001f7000cf7bbf1e71c361485aff6a7e44dded761fd9f091015012f747a232c168a43033fb4974204c340a5e358b046727b0a020
-#   HEAD_REF master
-# )
-
-vcpkg_from_git(
+vcpkg_from_github(
   OUT_SOURCE_PATH SOURCE_PATH
-  URL /Users/ac/src/signalflow
+  REPO acarabott/signalflow
   REF 2a929347800aac25e047ccf56f2d8e3949c131fd
+  SHA512 050ffefd252fa7a2f7675c5fde6c19617eadd3bdf7a6d0a6807e0f139181ab3cdcc04dfbe44c6357e7a98df8ef4f21b6aa84c7f3521cf0c4f9f7660878ae4a2b
   HEAD_REF master
 )
 
