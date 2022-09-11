@@ -17,8 +17,8 @@ vcpkg_configure_cmake(
   SOURCE_PATH "${SOURCE_PATH}"
   PREFER_NINJA
   OPTIONS
-    -DCMAKE_BUILD_SOUNDIO=OFF
-    -DCMAKE_BUILD_FILEIO=OFF
+    -DCMAKE_BUILD_SOUNDIO=ON
+    -DCMAKE_BUILD_FILEIO=ON
 )
 vcpkg_install_cmake()
 
