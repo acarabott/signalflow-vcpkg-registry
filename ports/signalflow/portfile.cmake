@@ -7,7 +7,7 @@ vcpkg_from_github(
 )
 
 vcpkg_configure_cmake(
-  SOURCE_PATH "${SOURCE_PATH}"
+  SOURCE_PATH ${SOURCE_PATH}
   PREFER_NINJA
   OPTIONS
     -DCMAKE_BUILD_SOUNDIO=OFF
@@ -15,9 +15,9 @@ vcpkg_configure_cmake(
 )
 vcpkg_install_cmake()
 
-file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug/include")
+file(REMOVE_RECURSE ${CURRENT_PACKAGES_DIR}/debug/include)
 
 file(
-  INSTALL "${SOURCE_PATH}/LICENSE.md"
-  DESTINATION "${CURRENT_PACKAGES_DIR}/share/${PORT}"
+  INSTALL ${SOURCE_PATH}/LICENSE.md
+  DESTINATION ${CURRENT_PACKAGES_DIR}/share/${PORT}
   RENAME copyright)
