@@ -45,3 +45,9 @@ This assumes you have `vcpkg` installed somewhere on your system as per [https:/
 ### When only the vcpkg port is updated
 
 If the `signalflow` repo hasn't changed, but changes are made to `ports/signalflow/portfile.cmake`, then `versions/s-/signalflow.json` needs to have the `port-version` property incremented by.
+
+## TODO
+
+- use tag for REF
+- add option to prevent building examples
+- squash and clean up
