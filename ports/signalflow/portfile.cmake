@@ -6,9 +6,19 @@ vcpkg_from_github(
   HEAD_REF master
 )
 
+vcpkg_check_features(OUT_FEATURE_OPTIONS FEATURE_OPTIONS
+  FEATURES
+    soundio   CMAKE_BUILD_SOUNDIO
+    fileio    CMAKE_BUILD_FILEIO
+    python    CMAKE_BUILD_PYTHON
+    vamp      CMAKE_BUILD_VAMP
+)
+
 vcpkg_configure_cmake(
   SOURCE_PATH ${SOURCE_PATH}
   PREFER_NINJA
+  OPTIONS
+    ${FEATURE_OPTIONS}
 )
 
 vcpkg_install_cmake()
