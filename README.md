@@ -1,10 +1,16 @@
 # signalflow-vcpkg-registry
 
-How to update this registry when `signalflow` has been updated.
+## Consuming this registry
+
+An example
+
+### Updating this registry
+
+How to update this registry to publish a new version of `signalflow`.
 
 This assumes you have `vcpkg` installed somewhere on your system as per [https://vcpkg.io/en/getting-started.html](https://vcpkg.io/en/getting-started.html). Wherever you see `[path-to-vcpkg]/vcpkg` in this file, replace with your path, e.g. if you cloned the vcpkg repo to `~/src/vcpkg` then `[path-to-vcpkg]/vcpkg install signalflow` becomes `~/src/vcpkg/vcpkg install`.
 
-## When Signalflow is updated
+### When Signalflow is updated
 
 1. Copy `vcpkg.json` from the `signalflow` repo to `ports/signalflow/vcpkg.json`
 2. Edit `versions/s-/signalflow.json`
@@ -33,7 +39,9 @@ This assumes you have `vcpkg` installed somewhere on your system as per [https:/
     - `git commit --amend`
 12. Push the changes to the registry
     - `git push`
+13. Update any projects that depend on this registry
+    - In their `vcpkg-configuration.json` file update `baseline` to be the hash of this repo's most recent commit (run `git log` to find it)
 
-## When only the vcpkg port is updated
+### When only the vcpkg port is updated
 
 If the `signalflow` repo hasn't changed, but changes are made to `ports/signalflow/portfile.cmake`, then `versions/s-/signalflow.json` needs to have the `port-version` property incremented by.
